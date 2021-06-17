@@ -12,8 +12,23 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h2 class="font-weight-bold mb-3">Product List</h2>
-
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2 class="font-weight-bold mb-3">Product List</h2>
+                        </div>
+    
+                        <div class="col-md-4">
+                            <div class="input-group mb-2 mr-sm-2">
+                                <input wire:model="search" type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Search product here">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
                     <table class="table table-bordered table-hovered table-striped">
                         <thead>
                             <tr class="text-center">
@@ -53,6 +68,8 @@
                             @endforelse
                         </tbody>
                     </table>
+
+                    {{ $products->links() }}
                 </div>
             </div>
         </div>
