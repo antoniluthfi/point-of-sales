@@ -11,7 +11,7 @@
             @endif
 
             <div class="card">
-                <div class="card-body">
+                <div class="card-header bg-white pb-0">
                     <div class="row">
                         <div class="col-md-8">
                             <h2 class="font-weight-bold mb-3">Product List</h2>
@@ -28,7 +28,9 @@
                             </div>
                         </div>
                     </div>
-    
+                </div>
+
+                <div class="card-body">   
                     <table class="table table-bordered table-hovered table-striped">
                         <thead>
                             <tr class="text-center">
@@ -75,9 +77,11 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body">
+                <div class="card-header bg-white pb-0">
                     <h2 class="font-weight-bold mb-3">{{ $title }}</h2>
+                </div>
 
+                <div class="card-body">
                     <form wire:submit.prevent="{{ $title == 'Create Product' ? 'store' : 'updateProduct(' . $productID . ')' }}">
                         <div class="form-group">
                             <label for="name">Product Name</label>
