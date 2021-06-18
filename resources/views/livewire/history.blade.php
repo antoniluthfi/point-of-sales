@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <label for="ip-address">IP Adress Printer</label>
+                                <label for="ip-address">IP Adress</label>
                                 <input wire:model="ip_address" type="text" class="form-control" id="ip-address">
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary btn-block" @if (!$invoice_number || !$ip_address || !$printer) disabled @endif>Print</button>
+                        <button type="submit" class="btn btn-primary btn-block" @if (!$invoice_number || !$ip_address || !$printer) disabled @endif>Print</button>
                     </div>
                 </form>
             </div>

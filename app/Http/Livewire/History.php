@@ -12,7 +12,6 @@ class History extends Component
 
     public $search, $invoice_number, $ip_address, $printer;
     protected $queryString = ['search'];
-    
 
     public function updatingSearch()
     {
@@ -22,6 +21,11 @@ class History extends Component
     public function setInvoiceNumber($invoice_number) 
     {
         $this->invoice_number = $invoice_number;
+    }
+
+    public function print()
+    {
+        dd('library belum terinstal');
     }
 
     public function render()

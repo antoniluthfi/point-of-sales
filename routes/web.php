@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Product;
 use App\Http\Livewire\Cart;
 use App\Http\Livewire\History;
+use App\Http\Livewire\Home;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Livewire\History;
 
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', Home::class)->name('home');
     Route::get('/products', Product::class)->name('product');
     Route::get('/cart', Cart::class)->name('cart');
     Route::get('/history', History::class)->name('history');
