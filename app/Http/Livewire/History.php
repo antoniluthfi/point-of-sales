@@ -10,12 +10,18 @@ class History extends Component
 {
     use WithPagination;
 
-    public $search;
+    public $search, $invoice_number, $ip_address, $printer;
     protected $queryString = ['search'];
+    
 
     public function updatingSearch()
     {
         $this->resetPage();
+    }
+
+    public function setInvoiceNumber($invoice_number) 
+    {
+        $this->invoice_number = $invoice_number;
     }
 
     public function render()
